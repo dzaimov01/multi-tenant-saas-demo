@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/app.css" />
+  <title>Sign in</title>
+</head>
+<body>
+  <main>
+    <div class="card">
+      <h1>Multi-tenant SaaS Demo</h1>
+      <p>Sign in to continue.</p>
+      <form method="post" action="/login">
+        <label for="username">Email</label>
+        <input id="username" name="username" type="email" required />
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" required />
+        <button type="submit">Sign in</button>
+      </form>
+    </div>
+  </main>
+</body>
+</html>

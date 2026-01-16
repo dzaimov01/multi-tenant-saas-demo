@@ -1,0 +1,91 @@
+:root {
+  --bg: #f7f4ef;
+  --ink: #1f1c1a;
+  --accent: #d76b4a;
+  --card: #ffffff;
+  --muted: #6d625a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+  background: linear-gradient(120deg, #f7f4ef, #efe3d9);
+  color: var(--ink);
+}
+
+main {
+  max-width: 960px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 16px 40px rgba(31, 28, 26, 0.08);
+}
+
+h1, h2 {
+  margin: 0 0 1rem 0;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 10px;
+  border: 1px solid #ddd4cc;
+  margin-bottom: 1rem;
+}
+
+button {
+  background: var(--accent);
+  border: none;
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #efe5dd;
+}
+
+.badge {
+  background: rgba(215, 107, 74, 0.15);
+  color: var(--accent);
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+}
+
+.tenant-links a {
+  margin-right: 0.75rem;
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 600;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/app.css" />
+  <title th:text="${settings.brandingName} + ' Projects'">Projects</title>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1 th:text="${settings.brandingName}">Tenant</h1>
+        <span class="badge" th:text="${settings.themeColor}">Theme</span>
+      </div>
+      <div class="tenant-links">
+        <a th:each="tenant : ${tenants}"
+           th:text="${tenant.name}"
+           th:href="'http://' + ${tenant.key} + '.localhost:8080/ui/projects'">
+          Tenant
+        </a>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2>Projects</h2>
+      <ul>
+        <li th:each="project : ${projects}">
+          <strong th:text="${project.name}">Project name</strong>
+          <div th:text="${project.description}">Description</div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="card" style="margin-top: 2rem;">
+      <h2>Create project</h2>
+      <form method="post" action="/ui/projects">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required />
+        <label for="description">Description</label>
+        <textarea id="description" name="description" rows="3"></textarea>
+        <button type="submit">Create</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
