@@ -1,0 +1,4 @@
+ALTER TABLE projects
+  ADD COLUMN archived BOOLEAN NOT NULL DEFAULT FALSE;
+
+UPDATE projects SET archived = FALSE WHERE archived IS NULL;
